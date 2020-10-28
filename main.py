@@ -200,15 +200,17 @@ def play_game():
     
     #display initial board
     display_board()
-    while game_still_going:
-        handle_turn()
 
-        check_game_over()
+    while game_still_going:
         
+        handle_turn()
+        check_game_over()
         flip_player()    
+
     #the game has ended
     if winner == "X" or winner == "O":
         print("Congratulations: "+winner+".")
+    
     elif winner == None:
         print("Tie.")    
 
